@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ikis Gesso - Acabamentos de Excelência</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,7 +15,7 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
             background: #0a1929;
@@ -26,7 +29,6 @@
             background: rgba(10, 25, 41, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1rem 0;
             transition: all 0.3s ease;
         }
 
@@ -61,7 +63,8 @@
         .logo-text {
             color: #FF6B35;
             font-size: 1.8rem;
-            font-weight: bold;
+            font-weight: 700;
+            font-style: italic;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -77,6 +80,10 @@
             text-decoration: none;
             transition: color 0.3s ease;
             position: relative;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .nav-links a:hover {
@@ -149,6 +156,7 @@
 
         .hero h1 {
             font-size: 4rem;
+            font-weight: 800;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, #FF6B35, #FFB366);
             -webkit-background-clip: text;
@@ -164,6 +172,8 @@
 
         .hero p {
             font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
@@ -175,9 +185,10 @@
             color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 0.95rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
         }
@@ -226,7 +237,7 @@
 
         /* Services Section */
         .services {
-            padding: 6rem 0;
+            padding: 2rem 0;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         }
 
@@ -243,12 +254,14 @@
 
         .section-title h2 {
             font-size: 3rem;
+            font-weight: 700;
             color: #0a1929;
             margin-bottom: 1rem;
         }
 
         .section-title p {
             font-size: 1.2rem;
+            font-weight: 300;
             color: #64748b;
             max-width: 600px;
             margin: 0 auto;
@@ -300,6 +313,7 @@
 
         .service-card h3 {
             font-size: 1.5rem;
+            font-weight: 600;
             color: #0a1929;
             margin-bottom: 1rem;
         }
@@ -307,11 +321,12 @@
         .service-card p {
             color: #64748b;
             line-height: 1.6;
+            font-weight: 300;
         }
 
         /* Gallery Section */
         .gallery {
-            padding: 6rem 0;
+            padding: 2rem 0;
             background: #0a1929;
             color: white;
         }
@@ -333,6 +348,8 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
 
         .filter-btn:hover,
@@ -541,30 +558,6 @@
         .modal-info p {
             opacity: 0.8;
         }
-        .about {
-            padding: 6rem 0;
-            background: #0a1929;
-            color: white;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #FF6B35;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
 
         .stats {
             display: grid;
@@ -589,70 +582,6 @@
         .stat-label {
             font-size: 0.9rem;
             opacity: 0.8;
-        }
-
-        .about-visual {
-            position: relative;
-            height: 400px;
-            background: linear-gradient(135deg, #2196F3, #1976D2);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .about-visual::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: rotate 10s linear infinite;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info h2 {
-            font-size: 2.5rem;
-            color: #0a1929;
-            margin-bottom: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #2196F3, #FF6B35);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
@@ -690,7 +619,9 @@
             border: none;
             border-radius: 10px;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -737,11 +668,6 @@
                 font-size: 1.2rem;
             }
 
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-
             .gallery-filters {
                 justify-content: center;
                 gap: 0.5rem;
@@ -770,16 +696,11 @@
 <body>
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">
-                <div class="logo-icon"></div>
-                <span class="logo-text">Ikis Gesso</span>
-            </div>
+            <a class="logo" href="#home"><img width="75px" src="images/logo.png" alt="IKIS GESSO"></a>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#gallery">Galeria</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -795,9 +716,9 @@
         <div class="floating-shape shape-3"></div>
         
         <div class="hero-content">
-            <h1>IKIS GESSO</h1>
+            <img width="300px" src="images/logo.png" alt="IKIS GESSO">
             <p>Acabamentos de Excelência em Gesso</p>
-            <a href="#contact" class="cta-button">Solicite um Orçamento</a>
+            <a class="cta-button" href="https://wa.me/553189405520?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank">Solicite um Orçamento</a>
         </div>
     </section>
 
@@ -845,7 +766,7 @@
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="section-title">
-                <h2>Nossos Trabalhos</h2>
+                <h2 style="color:rgba(255, 107, 53, 0.8)">Nossos Trabalhos</h2>
                 <p>Confira a qualidade e beleza dos nossos acabamentos em gesso através desta galeria de projetos realizados.</p>
             </div>
             
@@ -972,110 +893,9 @@
         </div>
     </div>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Sobre a Ikis Gesso</h2>
-                    <p>Com anos de experiência no mercado de acabamentos, a Ikis Gesso se consolidou como referência em qualidade e inovação. Nossa equipe especializada trabalha com técnicas modernas e materiais de primeira linha.</p>
-                    <p>Nosso compromisso é transformar seus ambientes com acabamentos impecáveis, sempre respeitando prazos e orçamentos acordados.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Projetos Realizados</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Clientes Satisfeitos</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Anos de Experiência</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">24h</div>
-                            <div class="stat-label">Resposta Rápida</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Entre em Contato</h2>
-                    <p>Solicite seu orçamento sem compromisso. Nossa equipe está pronta para atender você!</p>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <strong>Telefone</strong><br>
-                            (31) 9999-9999
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <strong>Email</strong><br>
-                            contato@ikisgesso.com.br
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <strong>Localização</strong><br>
-                            Ouro Preto - MG
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div>
-                            <strong>Horário</strong><br>
-                            Segunda a Sexta: 8h às 18h<br>
-                            Sábado: 8h às 12h
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Serviço de Interesse</label>
-                        <select id="service" name="service" style="width: 100%; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 1rem;">
-                            <option value="">Selecione um serviço</option>
-                            <option value="forro">Forro de Gesso</option>
-                            <option value="sanca">Sanca de Gesso</option>
-                            <option value="molduras">Molduras Decorativas</option>
-                            <option value="reparos">Reparos e Manutenção</option>
-                            <option value="personalizado">Projeto Personalizado</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Descreva seu projeto ou dúvida..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Ikis Gesso. Todos os direitos reservados. | Acabamentos de Excelência</p>
+            <p>&copy; 2025 Ikis Gesso</p>
         </div>
     </footer>
 
@@ -1115,19 +935,6 @@
             }
         });
 
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Simulate form submission
-            alert('Obrigado pelo contato! Entraremos em contato em breve.');
-            this.reset();
-        });
-
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
@@ -1162,20 +969,6 @@
             });
         });
 
-        // Add typing effect to hero title
-        const heroTitle = document.querySelector('.hero h1');
-        const text = heroTitle.textContent;
-        heroTitle.textContent = '';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                heroTitle.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        };
-        
         // Gallery functionality
         let currentGalleryItems = [];
         let currentModalIndex = 0;
