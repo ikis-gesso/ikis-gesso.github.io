@@ -639,6 +639,44 @@
             padding: 2rem 0;
         }
 
+            .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: white;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        min-width: 200px;
+    }
+
+    .social-link:hover {
+        background: rgba(255, 107, 53, 0.8);
+        transform: translateY(-3px);
+    }
+
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    @media (max-width: 768px) {
+        .social-links {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hamburger {
@@ -900,6 +938,16 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/ikis_gesso?igsh=MTVzaGFvMHJmOGhoNQ==" target="_blank" class="social-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon">
+                    @ikis_gesso
+                </a>
+                <a href="https://wa.me/553189405520?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" class="social-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="social-icon">
+                    (31) 98940-5520
+                </a>
+            </div>
             <p>&copy; 2025 Ikis Gesso</p>
         </div>
     </footer>
