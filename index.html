@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ikis Gesso - Acabamentos de Excelência</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -56,8 +59,13 @@
         }
 
         @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .logo-text {
@@ -142,8 +150,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .hero-content {
@@ -166,8 +181,13 @@
         }
 
         @keyframes glow {
-            from { filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.5)); }
-            to { filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.8)); }
+            from {
+                filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.5));
+            }
+
+            to {
+                filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.8));
+            }
         }
 
         .hero p {
@@ -327,6 +347,7 @@
         /* Gallery Section */
         .gallery {
             padding: 4rem 0;
+            padding-bottom: 0;
             background: #0a1929;
             color: white;
         }
@@ -639,43 +660,214 @@
             padding: 2rem 0;
         }
 
-            .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .social-link {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: white;
-        text-decoration: none;
-        padding: 0.75rem 1.5rem;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50px;
-        transition: all 0.3s ease;
-        min-width: 200px;
-    }
-
-    .social-link:hover {
-        background: rgba(255, 107, 53, 0.8);
-        transform: translateY(-3px);
-    }
-
-    .social-icon {
-        width: 24px;
-        height: 24px;
-    }
-
-    @media (max-width: 768px) {
         .social-links {
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
         }
-    }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 107, 53, 0.8);
+            transform: translateY(-3px);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-bottom: 4rem;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9/16;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-slide {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-item:hover .carousel-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-button:hover {
+            background: none;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-button.prev {
+            left: 20px;
+        }
+
+        .carousel-button.next {
+            right: 20px;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: #FF6B35;
+            transform: scale(1.2);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            height: auto;
+        }
+
+        .modal-caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+                max-width: 100%;
+                max-height: 100vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-container {
+                width: 100%;
+                aspect-ratio: 9/16;
+            }
+
+            .carousel-button {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -731,6 +923,7 @@
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <nav class="nav-container">
@@ -752,11 +945,13 @@
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
         <div class="floating-shape shape-3"></div>
-        
+
         <div class="hero-content">
             <img width="300px" src="images/logo.png" alt="IKIS GESSO">
             <p>Acabamentos de Excelência em Gesso</p>
-            <a class="cta-button" href="https://wa.me/553189405520?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank">Solicite um Orçamento</a>
+            <a class="cta-button"
+                href="https://wa.me/553189405520?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento"
+                target="_blank">Solicite um Orçamento</a>
         </div>
     </section>
 
@@ -764,43 +959,50 @@
         <div class="container">
             <div class="section-title">
                 <h2>Nossos Serviços</h2>
-                <p>Oferecemos soluções completas em acabamentos com gesso, sempre com qualidade superior e acabamento impecável.</p>
+                <p>Oferecemos soluções completas em acabamentos com gesso, sempre com qualidade superior e acabamento
+                    impecável.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🏗️</div>
                     <h3>Gesso Liso</h3>
-                    <p>Acabamento perfeito em paredes e tetos, garantindo superfícies uniformes e de alta qualidade para sua residência ou empresa.</p>
+                    <p>Acabamento perfeito em paredes e tetos, garantindo superfícies uniformes e de alta qualidade para
+                        sua residência ou empresa.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">🎯</div>
                     <h3>Rebaixamento de Teto</h3>
-                    <p>Projetos personalizados de rebaixamento com designs modernos e funcionais, ideais para iluminação e climatização.</p>
+                    <p>Projetos personalizados de rebaixamento com designs modernos e funcionais, ideais para iluminação
+                        e climatização.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">🔲</div>
                     <h3>Parede 3D</h3>
-                    <p>Revestimentos tridimensionais em gesso para criar ambientes únicos e sofisticados com texturas e designs exclusivos.</p>
+                    <p>Revestimentos tridimensionais em gesso para criar ambientes únicos e sofisticados com texturas e
+                        designs exclusivos.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
                     <h3>Molduras</h3>
-                    <p>Molduras decorativas em gesso para acabamentos refinados em tetos, paredes e rodapés, com diversos estilos e designs.</p>
+                    <p>Molduras decorativas em gesso para acabamentos refinados em tetos, paredes e rodapés, com
+                        diversos estilos e designs.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">🏢</div>
                     <h3>Drywall</h3>
-                    <p>Instalação completa de paredes e forros em drywall, oferecendo soluções práticas e modernas para divisórias e acabamentos.</p>
+                    <p>Instalação completa de paredes e forros em drywall, oferecendo soluções práticas e modernas para
+                        divisórias e acabamentos.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">💡</div>
                     <h3>Sancas</h3>
-                    <p>Sancas decorativas para iluminação indireta, criando ambientes sofisticados com acabamento elegante e profissional.</p>
+                    <p>Sancas decorativas para iluminação indireta, criando ambientes sofisticados com acabamento
+                        elegante e profissional.</p>
                 </div>
             </div>
         </div>
@@ -810,10 +1012,63 @@
         <div class="container">
             <div class="section-title">
                 <h2 style="color:rgba(255, 107, 53, 0.8)">Nossos Trabalhos</h2>
-                <p>Confira a qualidade e beleza dos nossos acabamentos em gesso através desta galeria de projetos realizados.</p>
+                <p>Confira a qualidade e beleza dos nossos acabamentos em gesso através desta galeria de projetos
+                    realizados.</p>
             </div>
-            
-            <div class="gallery-filters">
+
+            <div class="carousel">
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <div class="carousel-item">
+                            <img src="images/02.JPG" alt="Trabalho 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/04.JPG" alt="Trabalho 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/07.JPG" alt="Trabalho 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/08.JPG" alt="Trabalho 8">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/09.JPG" alt="Trabalho 9">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/10.JPG" alt="Trabalho 10">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/11.JPG" alt="Trabalho 11">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/12.JPG" alt="Trabalho 12">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/13.JPG" alt="Trabalho 13">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/14.JPG" alt="Trabalho 14">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/15.JPG" alt="Trabalho 15">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/16.JPG" alt="Trabalho 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots"></div>
+
+                <div id="carousel-modal" class="modal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="modal-image">
+                    <div class="modal-caption"></div>
+                </div>
+            </div>
+
+            <!-- <div class="gallery-filters">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="forro">Forros</button>
                 <button class="filter-btn" data-filter="sanca">Sancas</button>
@@ -823,7 +1078,6 @@
             </div>
 
             <div class="gallery-grid">
-                <!-- Forro Items -->
                 <div class="gallery-item" data-category="forro" data-title="Forro de Gesso Liso" data-description="Sala de estar com forro de gesso liso e iluminação embutida">
                     <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Forro de Gesso Liso">
                     <div class="gallery-overlay">
@@ -839,8 +1093,6 @@
                         <p>Design moderno e sofisticado</p>
                     </div>
                 </div>
-
-                <!-- Sanca Items -->
                 <div class="gallery-item" data-category="sanca" data-title="Sanca de Gesso Aberta" data-description="Sanca aberta com LED para iluminação indireta">
                     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sanca de Gesso">
                     <div class="gallery-overlay">
@@ -856,8 +1108,6 @@
                         <p>Detalhes únicos e sofisticados</p>
                     </div>
                 </div>
-
-                <!-- Moldura Items -->
                 <div class="gallery-item" data-category="moldura" data-title="Molduras Clássicas" data-description="Molduras em gesso com design clássico">
                     <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Molduras Clássicas">
                     <div class="gallery-overlay">
@@ -873,8 +1123,6 @@
                         <p>Design contemporâneo</p>
                     </div>
                 </div>
-
-                <!-- Decorativo Items -->
                 <div class="gallery-item" data-category="decorativo" data-title="Painel Decorativo" data-description="Painel decorativo em gesso com relevos artísticos">
                     <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Painel Decorativo">
                     <div class="gallery-overlay">
@@ -890,8 +1138,6 @@
                         <p>Ornamentos refinados</p>
                     </div>
                 </div>
-
-                <!-- Video Items -->
                 <div class="gallery-item video" data-category="video" data-title="Processo de Instalação" data-description="Vídeo mostrando nosso processo profissional de instalação">
                     <video muted loop>
                         <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
@@ -918,8 +1164,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Modal for Gallery -->
     <div id="gallery-modal" class="modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
@@ -933,231 +1177,343 @@
                 <h3 id="modal-title"></h3>
                 <p id="modal-description"></p>
             </div>
+        </div> -->
         </div>
-    </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.instagram.com/ikis_gesso?igsh=MTVzaGFvMHJmOGhoNQ==" target="_blank" class="social-link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon">
-                    @ikis_gesso
-                </a>
-                <a href="https://wa.me/553189405520?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" class="social-link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="social-icon">
-                    (31) 98940-5520
-                </a>
+        <footer class="footer">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/ikis_gesso?igsh=MTVzaGFvMHJmOGhoNQ==" target="_blank"
+                        class="social-link">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"
+                            class="social-icon">
+                        @ikis_gesso
+                    </a>
+                    <a href="https://wa.me/553189405520?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento"
+                        target="_blank" class="social-link">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
+                            class="social-icon">
+                        (31) 98940-5520
+                    </a>
+                </div>
+                <p style="font-size: 0.8rem;">&copy; 2025 Ikis Gesso</p>
             </div>
-            <p style="font-size: 0.8rem;">&copy; 2025 Ikis Gesso</p>
-        </div>
-    </footer>
+        </footer>
 
-    <script>
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+        <script>
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                navLinks.classList.remove('active');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
             });
-        });
 
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(10, 25, 41, 0.98)';
-                header.style.backdropFilter = 'blur(15px)';
-            } else {
-                header.style.background = 'rgba(10, 25, 41, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            }
-        });
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                    navLinks.classList.remove('active');
+                });
+            });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 50) {
+                    header.style.background = 'rgba(10, 25, 41, 0.98)';
+                    header.style.backdropFilter = 'blur(15px)';
+                } else {
+                    header.style.background = 'rgba(10, 25, 41, 0.95)';
+                    header.style.backdropFilter = 'blur(10px)';
                 }
             });
-        }, observerOptions);
 
-        // Observe all service cards
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
-        // Add parallax effect to floating shapes
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const shapes = document.querySelectorAll('.floating-shape');
-            
-            shapes.forEach((shape, index) => {
-                const speed = 0.5 + (index * 0.1);
-                shape.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-
-        // Gallery functionality
-        let currentGalleryItems = [];
-        let currentModalIndex = 0;
-
-        // Filter buttons
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-                
-                const filter = btn.getAttribute('data-filter');
-                const items = document.querySelectorAll('.gallery-item');
-                
-                items.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 100);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
                     }
                 });
-                
-                // Update current items for modal navigation
-                updateCurrentItems();
+            }, observerOptions);
+
+            // Observe all service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
             });
-        });
 
-        // Update current visible items
-        function updateCurrentItems() {
-            currentGalleryItems = Array.from(document.querySelectorAll('.gallery-item')).filter(item => 
-                window.getComputedStyle(item).display !== 'none'
-            );
-        }
+            // Add parallax effect to floating shapes
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const shapes = document.querySelectorAll('.floating-shape');
 
-        // Initialize current items
-        updateCurrentItems();
-
-        // Gallery item click handlers
-        document.querySelectorAll('.gallery-item').forEach((item, index) => {
-            item.addEventListener('click', () => {
-                openModal(item);
+                shapes.forEach((shape, index) => {
+                    const speed = 0.5 + (index * 0.1);
+                    shape.style.transform = `translateY(${scrolled * speed}px)`;
+                });
             });
-        });
 
-        // Modal functionality
-        const modal = document.getElementById('gallery-modal');
-        const modalImg = document.getElementById('modal-img');
-        const modalVideo = document.getElementById('modal-video');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDescription = document.getElementById('modal-description');
-        const modalClose = document.querySelector('.modal-close');
-        const modalPrev = document.querySelector('.modal-prev');
-        const modalNext = document.querySelector('.modal-next');
+            // Gallery functionality
+            let currentGalleryItems = [];
+            let currentModalIndex = 0;
 
-        function openModal(item) {
-            const isVideo = item.classList.contains('video');
-            const title = item.getAttribute('data-title');
-            const description = item.getAttribute('data-description');
-            
-            currentModalIndex = currentGalleryItems.indexOf(item);
-            
-            modalTitle.textContent = title;
-            modalDescription.textContent = description;
-            
-            if (isVideo) {
-                const videoSrc = item.querySelector('video source').getAttribute('src');
-                modalVideo.querySelector('source').setAttribute('src', videoSrc);
-                modalVideo.load();
-                modalVideo.style.display = 'block';
-                modalImg.style.display = 'none';
-            } else {
-                const imgSrc = item.querySelector('img').getAttribute('src');
-                modalImg.setAttribute('src', imgSrc);
-                modalImg.style.display = 'block';
-                modalVideo.style.display = 'none';
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+                    const items = document.querySelectorAll('.gallery-item');
+
+                    items.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+
+                    // Update current items for modal navigation
+                    updateCurrentItems();
+                });
+            });
+
+            // Update current visible items
+            function updateCurrentItems() {
+                currentGalleryItems = Array.from(document.querySelectorAll('.gallery-item')).filter(item =>
+                    window.getComputedStyle(item).display !== 'none'
+                );
             }
-            
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
 
-        function closeModal() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            modalVideo.pause();
-        }
+            // Initialize current items
+            updateCurrentItems();
 
-        function navigateModal(direction) {
-            const newIndex = direction === 'next' 
-                ? (currentModalIndex + 1) % currentGalleryItems.length
-                : (currentModalIndex - 1 + currentGalleryItems.length) % currentGalleryItems.length;
-            
-            openModal(currentGalleryItems[newIndex]);
-        }
-
-        // Modal event listeners
-        modalClose.addEventListener('click', closeModal);
-        modalPrev.addEventListener('click', () => navigateModal('prev'));
-        modalNext.addEventListener('click', () => navigateModal('next'));
-
-        // Close modal on background click
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (modal.style.display === 'block') {
-                if (e.key === 'Escape') closeModal();
-                if (e.key === 'ArrowLeft') navigateModal('prev');
-                if (e.key === 'ArrowRight') navigateModal('next');
-            }
-        });
-
-        // Auto-play videos on hover in gallery
-        document.querySelectorAll('.gallery-item.video video').forEach(video => {
-            const item = video.closest('.gallery-item');
-            item.addEventListener('mouseenter', () => {
-                video.play();
+            // Gallery item click handlers
+            document.querySelectorAll('.gallery-item').forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    openModal(item);
+                });
             });
-            item.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
+
+            // Modal functionality
+
+            const modalVideo = document.getElementById('modal-video');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            const modalPrev = document.querySelector('.modal-prev');
+            const modalNext = document.querySelector('.modal-next');
+
+            function openModal(item) {
+                const isVideo = item.classList.contains('video');
+                const title = item.getAttribute('data-title');
+                const description = item.getAttribute('data-description');
+
+                currentModalIndex = currentGalleryItems.indexOf(item);
+
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+
+                if (isVideo) {
+                    const videoSrc = item.querySelector('video source').getAttribute('src');
+                    modalVideo.querySelector('source').setAttribute('src', videoSrc);
+                    modalVideo.load();
+                    modalVideo.style.display = 'block';
+                    modalImg.style.display = 'none';
+                } else {
+                    const imgSrc = item.querySelector('img').getAttribute('src');
+                    modalImg.setAttribute('src', imgSrc);
+                    modalImg.style.display = 'block';
+                    modalVideo.style.display = 'none';
+                }
+
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+
+            function navigateModal(direction) {
+                const newIndex = direction === 'next'
+                    ? (currentModalIndex + 1) % currentGalleryItems.length
+                    : (currentModalIndex - 1 + currentGalleryItems.length) % currentGalleryItems.length;
+
+                openModal(currentGalleryItems[newIndex]);
+            }
+
+            // Modal event listeners
+            // modalClose.addEventListener('click', closeModal);
+            // modalPrev.addEventListener('click', () => navigateModal('prev'));
+            // modalNext.addEventListener('click', () => navigateModal('next'));
+
+            // Close modal on background click
+            // modal.addEventListener('click', (e) => {
+            //     if (e.target === modal) {
+            //         closeModal();
+            //     }
+            // });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (modal.style.display === 'block') {
+                    if (e.key === 'Escape') closeModal();
+                    if (e.key === 'ArrowLeft') navigateModal('prev');
+                    if (e.key === 'ArrowRight') navigateModal('next');
+                }
             });
-        });
-    </script>
+
+            // Auto-play videos on hover in gallery
+            document.querySelectorAll('.gallery-item.video video').forEach(video => {
+                const item = video.closest('.gallery-item');
+                item.addEventListener('mouseenter', () => {
+                    video.play();
+                });
+                item.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
+            });
+
+            // Carousel functionality
+            const carousel = document.querySelector('.carousel-slide');
+            const items = document.querySelectorAll('.carousel-item');
+            const dotsContainer = document.querySelector('.carousel-dots');
+            let currentIndex = 0;
+
+            // Create dots
+            items.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            // Update dots
+            function updateDots() {
+                document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            // Go to specific slide
+            function goToSlide(index) {
+                currentIndex = index;
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                updateDots();
+            }
+
+            // Next slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % items.length;
+                goToSlide(currentIndex);
+            }
+
+            // Previous slide
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                goToSlide(currentIndex);
+            }
+
+            // Event listeners
+            document.querySelector('.carousel-button.next').addEventListener('click', nextSlide);
+            document.querySelector('.carousel-button.prev').addEventListener('click', prevSlide);
+
+            // Auto slide (optional)
+            let autoSlide = setInterval(nextSlide, 5000);
+
+            // Pause auto slide on hover
+            document.querySelector('.carousel').addEventListener('mouseenter', () => {
+                clearInterval(autoSlide);
+            });
+
+            document.querySelector('.carousel').addEventListener('mouseleave', () => {
+                autoSlide = setInterval(nextSlide, 5000);
+            });
+
+            // Touch events for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            carousel.addEventListener('touchstart', e => {
+                touchStartX = e.touches[0].clientX;
+            });
+
+            carousel.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].clientX;
+                if (touchStartX - touchEndX > 50) {
+                    nextSlide();
+                } else if (touchEndX - touchStartX > 50) {
+                    prevSlide();
+                }
+            });
+
+            // Adicione este código junto com os outros scripts
+            const modal = document.getElementById("carousel-modal");
+            const modalImg = document.getElementById("modal-image");
+            const modalClose = document.querySelector(".modal-close");
+            const carouselItems = document.querySelectorAll(".carousel-item");
+
+            // Adicionar evento de clique para cada item do carrossel
+            carouselItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const img = item.querySelector('img');
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                    const caption = item.querySelector('.carousel-overlay');
+                    document.querySelector('.modal-caption').innerHTML = caption.innerHTML;
+                });
+            });
+
+            // Fechar modal
+            modalClose.addEventListener('click', function () {
+                modal.style.display = "none";
+            });
+
+            // Fechar modal ao clicar fora da imagem
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            // Fechar modal com a tecla ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.style.display === "block") {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
 </body>
+
 </html>
